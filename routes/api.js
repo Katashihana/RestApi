@@ -536,19 +536,17 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/tiktok/randomtiktok', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!query) return res.json(loghandler.notquery)
-  
-  if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/vidio/tiktok?apikey=alpin1`))
-  .then(response => response.json())
-        .then(hasil => {
+router.get('/tiktok/randomtiktok', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
 
-        var result = hasil.data;
+       fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/vidio/tiktok?apikey=alpin1`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.data;
              res.json({
-                 status : true,
                  creator : `${creator}`,
                  result
              })
@@ -557,7 +555,7 @@ router.get('/tiktok/randomtiktok', async(req, res, next) => {
          	res.json(loghandler.error)
 })
 } else {
-  res.json(loghandler.invalidKey)
+res.json(loghandler.invalidKey)
 }
 })
 
