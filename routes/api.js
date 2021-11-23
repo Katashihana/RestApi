@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')  
 }
  
-var creator = "AMEL CANS"
+var creator = "Putra Gans "
 var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
@@ -150,7 +150,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'apikey invalid'
+        message: 'apikey invalid chat owmer wa.me//6289626029135'
     },
     invalidlink: {
         status: false,
@@ -175,7 +175,7 @@ Akhir Pesan Error
 
 router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["aruliazmi", "mecha", "mechakey", "freenihajg"];
+const listkey = ["katashi", "Katashi", "Putra", "Pipiw"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -1421,7 +1421,7 @@ router.get('/info/kbbi', async (req, res, next) => {
 	if(listkey.includes(Apikey)){
         if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
-       fetch(encodeURI(`https://kbbi-api-zhirrr.vercel.app/api/kbbi?text=${kata}`))
+       fetch(encodeURI(`https://h4ck3rs404-api.herokuapp.com/api/kbbi?kata=${kata}&apikey=404Api`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -1514,7 +1514,7 @@ router.get('/info/kodepos', async (req, res, next) => {
 	if(listkey.includes(Apikey)){
 	if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
 
-       fetch(encodeURI(`https://kodepos-api-zhirrr.vercel.app/?q=${kota}`))
+       fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/info/kodepos?kota=${kota}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
