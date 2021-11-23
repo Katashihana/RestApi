@@ -536,6 +536,30 @@ res.json(loghandler.invalidKey)
 }
 })
 
+router.get('/tiktok/randomtiktok', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+  fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/vidio/tiktok?apikey=alpin1`))
+  .then(response => response.json())
+        .then(hasil => {
+
+        var result = hasil.data;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.invalidKey)
+}
+})
 
 router.get('/jadwal-bioskop', async(req, res, next) => {
 var Apikey = req.query.apikey
@@ -2507,7 +2531,6 @@ router.get('/web2plain-text', async(req, res, next) => {
     res.json(loghandler.invalidKey)
   }
 });
-
 
 router.get('/cekapikey', async(req, res, next) => {
   const apikey = req.query.apikey;
