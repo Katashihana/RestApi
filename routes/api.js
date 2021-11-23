@@ -2433,8 +2433,8 @@ router.get('/maker/tololserti', async(req, res, next) => {
   if(listkey.includes(apikey)){
   let hasil = `https://lolhuman.herokuapp.com/api/toloserti?apikey=muzharzain&name=${text}`
   data = await fetch(hasil).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/tololserti.jpeg', data)
-        res.sendFile(__path+'/tmp/tololserti.jpeg')
+         await fs.writeFileSync(__path +'/tmp/fuckgirlserti.jpeg', data)
+        res.sendFile(__path+'/tmp/fuckgirlserti.jpeg')
   } else {
     res.json(loghandler.invalidKey)
   }
