@@ -2469,8 +2469,8 @@ router.get('/maker/fuckgirlserti', async(req, res, next) => {
   if(listkey.includes(apikey)){
   let hasil = `https://api.lolhuman.xyz/api/fuckgirl?apikey=YTRAMLANID&name=${teks}`
   data = await fetch(hasil).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/fuckgirlserti.jpeg', data)
-        res.sendFile(__path+'/tmp/fuckgirlserti.jpeg')
+         await fs.writeFileSync(__path +'/tmp/fuckgirl.jpeg', data)
+        res.sendFile(__path+'/tmp/fuckgirl.jpeg')
   } else {
     res.json(loghandler.invalidKey)
   }
