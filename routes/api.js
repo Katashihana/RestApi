@@ -434,6 +434,75 @@ router.get('/igstory', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
+router.get('/info/lk21', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        query = req.query.query
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://149.56.24.226/?s=${query}#gsc.tab=0&gsc.q=${query}&gsc.page=1`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+router.get('/maker/nulis2', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        query = req.query.query
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://viko-api.herokuapp.com/api/textmaker/nulis2?apikey=katashi&query=${query}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+router.get('/info/kbbi', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        kata = req.query.kata
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/info/kbbi?kata=${kata}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 router.get('/smule', async (req, res, next) => {
         var Apikey = req.query.apikey
         url = req.query.url
@@ -458,19 +527,18 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/memegen', async (req, res, next) => {
+router.get('/smule', async (req, res, next) => {
+	    url = req.query.url
         var Apikey = req.query.apikey
-        atas = req.query.atas
-        bawah = req.query.bawah
-        url = req.query.url
+        
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${atas}&text-bawah={bawah}&background-url=${url}`))
+       fetch(encodeURI(`https://zahirr-web.herokuapp.com/api/short/tiny?url=${url}&apikey=zahirgans`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+        var result = data.result;
              res.json({
                  creator : `${creator}`,
                  result
