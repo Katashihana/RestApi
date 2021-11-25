@@ -363,8 +363,9 @@ router.get('/yt/search', async(req, res, next) => {
      }
 });
 router.get('/other/mirrorcreator', async (req, res, next) => {
+	    url = req.query.url
         var Apikey = req.query.apikey
-        const url = req.query.query;
+        
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
@@ -387,8 +388,9 @@ res.json(loghandler.invalidKey)
 })
 
 router.get('/other/ouo', async (req, res, next) => {
+	    url = req.query.url
         var Apikey = req.query.apikey
-        const url = req.query.query;
+        
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
@@ -614,7 +616,7 @@ router.get('/other/password', async (req, res, next) => {
        fetch(encodeURI(`https://h4ck3rs404-api.herokuapp.com/api/gen-password?&apikey=404Api`))
         .then(response => response.json())
         .then(data => {
-        var result = data.data;
+        var result = data.result;
              res.json({
                  creator : `${creator}`,
                  result
