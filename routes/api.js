@@ -480,6 +480,29 @@ router.get('/maker/nulis2', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
+router.get('/maker/quotesmaker', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        query = req.query.query
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://viko-api.herokuapp.com/api/textmaker/quoteser?apikey=katashi&query=${query}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 router.get('/info/kbbi', async (req, res, next) => {
         var Apikey = req.query.apikey
         kata = req.query.kata
@@ -493,6 +516,30 @@ router.get('/info/kbbi', async (req, res, next) => {
         var result = data.result;
              res.json({
                  creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+router.get('/info/wiki', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        query = req.query.kata
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/wiki?query=${query}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 creator : `${creator}`,
+                 powered_by : `wikipedia.org`,
                  result
              })
          })
