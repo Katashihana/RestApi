@@ -362,6 +362,53 @@ router.get('/yt/search', async(req, res, next) => {
      res.json(loghandler.invalidKey)
      }
 });
+router.get('/other/mirrorcreator', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        const url = req.query.query;
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://api.lolhuman.xyz/api/mirrorcreator?apikey=YTRAMLANID&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/other/ouo', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        const url = req.query.query;
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://api.lolhuman.xyz/api/ouo?apikey=YTRAMLANID&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
 router.get('/download/tiktok', async (req, res, next) => {
     var Apikey = req.query.apikey,
@@ -558,7 +605,28 @@ router.get('/tiktok/randomtiktok', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
+router.get('/other/password', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
 
+       fetch(encodeURI(`https://h4ck3rs404-api.herokuapp.com/api/gen-password?&apikey=404Api`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 router.get('/jadwal-bioskop', async(req, res, next) => {
 var Apikey = req.query.apikey
 
@@ -2457,20 +2525,6 @@ router.get('/maker/tololserti', async(req, res, next) => {
   data = await fetch(hasil).then(v => v.buffer())
          await fs.writeFileSync(__path +'/tmp/tololserti.jpeg', data)
         res.sendFile(__path+'/tmp/tololserti.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-});
-router.get('/maker/fuckgirlserti', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
-  if(!text) return res.json(loghandler.noturl)
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
-  let hasil = `https://api.lolhuman.xyz/api/fuckgirl?apikey=YTRAMLANID&name=${teks}`
-  data = await fetch(hasil).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/fuckgirl.jpeg', data)
-        res.sendFile(__path+'/tmp/fuckgirl.jpeg')
   } else {
     res.json(loghandler.invalidKey)
   }
