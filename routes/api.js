@@ -411,6 +411,78 @@ router.get('/other/ouo', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
+router.get('/igstory', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        query = req.query.query
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://bochil.ddns.net/igstory?q=${query}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+router.get('/smule', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        url = req.query.url
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://mnazria.herokuapp.com/api/smule?link={url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/memegen', async (req, res, next) => {
+        var Apikey = req.query.apikey
+        atas = req.query.atas
+        bawah = req.query.bawah
+        url = req.query.url
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${atas}&text-bawah={bawah}&background-url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
 router.get('/download/tiktok', async (req, res, next) => {
     var Apikey = req.query.apikey,
