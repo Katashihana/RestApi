@@ -45,7 +45,7 @@ var {
 } = require("./../lib/utils/photooxy");
 
 var {
-  palingmurah_,
+  palingmurah,
   layarkaca_,
   Amino_,
 } = require("./../lib/search");
