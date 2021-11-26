@@ -1,7 +1,6 @@
 __path = process.cwd()
 var favicon = require('serve-favicon');
 var express = require('express');
-router = express.Router(), search = require('../lib/search.js')
 var db = require(__path + '/database/db');
 try {
 var zahirr = db.get("zahirr");
@@ -2166,17 +2165,6 @@ router.get("/photooxy/glitch", async(req, res, next) => {
     	res.json(loghandler.invalidKey)
     }
 });
-
-router.get('/palingmurah_, async (req, res) => {
-	let produk = req.query.produk
-	let apikey = req.query.apikey
-	if (!q) return res.json(global.status.query)
-	if (!apikey) return res.json(global.status.apikey)
-	if (!global.apikey.includes(apikey)) return res.json(global.status.invalidKey)
-	let result = await search.palingmurah_(produk)
-	res.header('Content-Type: application/json')
-	res.type('json').send(JSON.stringify(result, null, 2))
-})
 
 router.get("/photooxy/double-heart", async(req, res, next) => {
   const text1 = req.query.text;
