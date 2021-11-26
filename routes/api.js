@@ -304,6 +304,30 @@ router.get('/download/ytmp4', async(req, res, next) => {
     }
 });
 
+router.get("/search/palingmurah", async(req, res, next) => {
+  const query = req.query.query;
+  const apikey = req.query.apikey;
+  if(!text1) return res.json(loghandler.nottext1)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  palingmurah(query)
+    .then((result) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: 
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.json(loghandler.invalidKey)
+    }
+});
+
 router.get("/yt/playmp3", async(req, res, next) => {
     const query = req.query.query;
     const apikey = req.query.apikey;
@@ -2185,30 +2209,6 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
         code: 200,
         creator: `${creator}`,
         result: data.url
-      }
-      res.json(result)
-    })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
-});
-
-router.get("/search/palingmurah", async(req, res, next) => {
-  const produk = req.query.query;
-  const apikey = req.query.apikey;
-  if(!text1) return res.json(loghandler.nottext1)
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
-  palingmurah_(produk)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.result
       }
       res.json(result)
     })
