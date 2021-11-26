@@ -45,6 +45,12 @@ var {
 } = require("./../lib/utils/photooxy");
 
 var {
+  palingmurah_,
+  layarkaca_,
+  Amino_,
+} = require("./../lib/search");
+
+var {
   igStalk,
   igDownload
 } = require("./../lib/utils/ig");
@@ -2179,6 +2185,30 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
         code: 200,
         creator: `${creator}`,
         result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.json(loghandler.invalidKey)
+    }
+});
+
+router.get("/search/palingmurah_", async(req, res, next) => {
+  const produk = req.query.query;
+  const apikey = req.query.apikey;
+  if(!text1) return res.json(loghandler.nottext1)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  palingmurah_(produk)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.result
       }
       res.json(result)
     })
