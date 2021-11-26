@@ -2196,7 +2196,7 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
     }
 });
 
-router.get("/search/palingmurah_", async(req, res, next) => {
+router.get("/search/palingmurah", async(req, res, next) => {
   const produk = req.query.query;
   const apikey = req.query.apikey;
   if(!text1) return res.json(loghandler.nottext1)
