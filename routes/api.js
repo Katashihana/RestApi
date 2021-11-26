@@ -45,7 +45,7 @@ var {
 } = require("./../lib/utils/photooxy");
 
 var {
-  palingmurah,
+  palingmurah_,
   layarkaca_,
   Amino_,
 } = require("./../lib/search");
@@ -305,28 +305,19 @@ router.get('/download/ytmp4', async(req, res, next) => {
 });
 
 router.get("/search/palingmurah", async(req, res, next) => {
-  const query = req.query.query;
   const apikey = req.query.apikey;
-  if(!text1) return res.json(loghandler.nottext1)
+  const produk = req.query.query;
+  if(!produk) return res.json(loghandler.notquery)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  palingmurah(query)
-    .then((result) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: 
-      }
-      res.json(result)
+  palingmurah_(produk)
+    .then((data) => {
+      res.json(data)
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
-});
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
 
 router.get("/yt/playmp3", async(req, res, next) => {
     const query = req.query.query;
