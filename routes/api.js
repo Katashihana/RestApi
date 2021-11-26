@@ -51,6 +51,18 @@ var {
 } = require("./../lib/search");
 
 var {
+  jalantikus,
+  turnbackhoax,
+  muihalal,
+  happymod,
+  apkmody,
+  moddroid,
+  servermc,
+  mcpedl,
+  pstore,
+} = require("./../lib/tod");
+
+var {
   igStalk,
   igDownload
 } = require("./../lib/utils/ig");
@@ -99,6 +111,12 @@ loghandler = {
         message: 'masukan parameter url'
     },
     notquery: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukkan parameter query'
+        },
+    notpage: {
         status: false,
         creator: `${creator}`,
         code: 406,
@@ -311,6 +329,55 @@ router.get("/search/palingmurah", async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
   palingmurah_(produk)
+    .then((data) => {
+      res.json(data)
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
+router.get("/search/pstore", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  const page = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!page) return res.json(loghandler.notpage)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  pstore(query, page)
+    .then((data) => {
+      res.json(data)
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
+router.get("/search/muihalal", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  const page = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!page) return res.json(loghandler.notpage)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  muihalal(query, page)
+    .then((data) => {
+      res.json(data)
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
+router.get("/search/jalantikus", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!query) return res.json(loghandler.notquery)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  jalantikus(query)
     .then((data) => {
       res.json(data)
     })
