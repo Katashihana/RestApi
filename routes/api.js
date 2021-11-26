@@ -319,6 +319,21 @@ router.get("/search/palingmurah", async(req, res, next) => {
   }
 })
 
+router.get("/search/layarkaca", async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const pilem = req.query.query;
+  if(!pilem) return res.json(loghandler.notquery)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  layarkaca_(pilem)
+    .then((data) => {
+      res.json(data)
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
 router.get("/yt/playmp3", async(req, res, next) => {
     const query = req.query.query;
     const apikey = req.query.apikey;
