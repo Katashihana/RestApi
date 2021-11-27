@@ -2,367 +2,492 @@
 <html lang="en">
  
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A REST APIs website that provides a wide variety of features for developers.">
-    <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
-    <meta name="author" content="Katashi Hana">
-    <title>Katashi Hana - REST APIs</title>
-    <meta property="og:site_name" name="og:site_name" content="LoL Human APIs">
-    <meta property="og:title" name="og:title" content="Katashi Hana - REST APIs">
-    <meta property="og:url" name="og:url" content="https://api.lolhuman.xyz/">
-    <meta property="og:image" name="og:image" content="https://api.lolhuman.xyz/static/icon/android-icon-192x192.png">
-    <meta property="og:description" name="og:description" content="A REST APIs website that provides a wide variety of features for developers.">
-    <link rel="apple-touch-icon" sizes="57x57" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="60x60" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="shortcut icon" type="image/x-icon" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/static/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://api.lolhuman.xyz/">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-    <link rel="stylesheet" href="https://api.lolhuman.xyz/static/css/nucleo-icons.css">
-    <link rel="stylesheet" href="https://api.lolhuman.xyz/static/fontawesome5/css/all.min.css">
-    <link rel="stylesheet" href="https://api.lolhuman.xyz/static/flaticon/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://api.lolhuman.xyz/static/css/black-dashboard.min.css">
-    <link rel="stylesheet" href="https://api.lolhuman.xyz/static/css/style.css">
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+    <title>Api Fahmi</title>
+    <meta name="google-site-verification" content="ea5M_Xrz57Vr2aVnNNMvryLnXhC2mruWlpbPSxTZwIY" />
+    <script async='async' data-ad-client='ca-pub-9147144556578830' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+ 
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/css/app.min.css" />
+ 
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/css/style.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/css/components.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/bundles/iziToast.min.css">
+ 
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/css/custom.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <script src="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/bundles/iziToast.min.js"></script>
+ 
+    <!-- Meta bot -->
+    <meta content='FAMBOT' property='og:title' />
+    <meta content='https://i.ibb.co/F4svKGd/thumbnail.png' property='og:image' />
+    <meta content='Bot WhatsApp Nodejs Serbaguna by Fahmi Hdytllah!' property='og:description' />
+ 
 </head>
  
-<body class="dark-mode" data-background-color="dark">
-    <div class="wrapper">
-        <div class="sidebar">
-            <div class="sidebar-wrapper card-round">
-                <div class="logo text-center">
-                    <a href="/" class="simple-text logo-normal" style="font-size: large;">
-                        Katashi Hana APIs
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="active">
-                        <a href="/docs">
-                            <i class="fi-rr-cookie"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/changelog">
-                            <i class="fi-rr-refresh"></i>
-                            <p>Changelog</p>
-                        </a>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="/islami">
-                            <i class="far fa-quran"></i>
-                            <p>Islami</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/downloader">
-                            <i class="fi-rr-download"></i>
-                            <p>Downloader</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/movie">
-                            <i class="fi-rr-video-camera"></i>
-                            <p>Movie & Story</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/textprome">
-                            <i class="fi-rr-text"></i>
-                            <p>Text Pro Me</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/photooxy">
-                            <i class="fi-rr-camera"></i>
-                            <p>Photo Oxy</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ephoto">
-                            <i class="fi-rr-cursor-text"></i>
-                            <p>Ephoto 360</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/searching">
-                            <i class="fi-rr-search-alt"></i>
-                            <p>Searching</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/randomimage">
-                            <i class="fi-rr-gallery"></i>
-                            <p>Random Image</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/randomtext">
-                            <i class="fi-rr-align-center"></i>
-                            <p>Random Text</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/animanga">
-                            <i class="fi-rr-crown"></i>
-                            <p>AniManga</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/information">
-                            <i class="fi-rr-info"></i>
-                            <p>Information</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/game">
-                            <i class="fal fa-gamepad-alt"></i>
-                            <p>Game</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/creator">
-                            <i class="fi-rr-magic-wand"></i>
-                            <p>Creator</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/converter">
-                            <i class="fal fa-recycle"></i>
-                            <p>Converter</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/primbon">
-                            <i class="fi-rr-password"></i>
-                            <p>Primbon (COMING SOON)</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/stalking">
-                            <i class="fi-rr-stats"></i>
-                            <p>Stalking</p>
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 8rem !important;">
-                        <a href="/other">
-                            <i class="fi-rr-tooth"></i>
-                            <p>Other</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-panel">
-            <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-toggle d-inline">
-                            <button type="button" class="navbar-toggler">
-                                <span class="navbar-toggler-bar bar1"></span>
-                                <span class="navbar-toggler-bar bar2"></span>
-                                <span class="navbar-toggler-bar bar3"></span>
-                            </button>
-                        </div>
-                        <a class="navbar-brand" href="#">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navigation">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="tim-icons icon-zoom-split"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-search p-3 shadow animated--grow-in dark-color" aria-labelledby="searchDropdown" style="border: none;">
-                                    <form class="navbar-search" action="/search" method="GET">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="input-group-text" type="submit">
-                                                    <i class="tim-icons icon-zoom-split"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="form-control" name="q" placeholder="Search" autocomplete="off" required>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="fi-rr-shopping-cart text-success"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 col-stats">
-                                        <div class="numbers">
-                                            <p class="card-category">Requests</p>
-                                            <h4 class="card-title" id="requests">
-                                                0
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="fi-rr-time-twenty-four text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 col-stats">
-                                        <div class="numbers">
-                                            <p class="card-category">Today</p>
-                                            <h4 class="card-title" id="requests_today">
-                                                0
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--2">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="card card-stats card-round">
-                            <div class="card-header">
-                                <h3 style="margin-bottom: 0">
-                                    <i class="fas fa-ruler text-danger"></i> S&K
-                                </h3>
-                            </div>
-                            <div class="card-body mb-3">
-                                <ol>
-                                    <li>Jangan flooding requests.</li>
-                                    <li>
-                                        Membuat banyak akun pada IP yang sama maka IP otomatis akan di block.
-                                    </li>
-                                    <li>
-                                        Owner dapat sewaktu waktu mengubah ketentuan di website ini, demi menjaga kualitas website.
-                                    </li>
-                                    <li>
-                                        Dilarang keras untuk menyebarkan apikey Anda, jika ketahuan. InsyaAllah akan di block :)
-                                    </li>
-                                    <li>Jangan ditembak atuh, sakit.</li>
-                                    <li>
-                                        Owner tidak bertanggung jawab atas apa yang Anda lakukan dalam penggunaan website ini.
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--2">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="card card-stats card-round">
-                            <div class="card-header">
-                                <h3 style="margin-bottom: 0">
-                                    <i class="fal fa-sparkles text-success"></i> Thanks To
-                                </h3>
-                            </div>
-                            <div class="card-body mb-2">
-                                <ul>
-                                    <li>Allah SWT.</li>
-                                    <li>My Parents</li>
-                                    <li>My Friends</li>
-                                    <li>Heroku</li>
-                                    <li>lolhuman</li>
-                                    <li>Katashi</li>
-                                    <li>Saya</li>
-                                    <li>Krypton Byte</li>
-                                    <li>Saya</li>
-                                    <li>ArugaZ</li>
-                                    <li>Bang Hasan</li>
-                                    <li>
-                                        And all of you who have used the web wisely and always supported me.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="card card-stats card-round">
-                            <div class="card-header">
-                                <h3 style="margin-bottom: 0">
-                                    <i class="fi-rr-headset text-warning"></i> Contact Me
-                                </h3>
-                            </div>
-                            <div class="card-body mb-2">
-                                <p>Hello, Everyone!</p>
-                                <ul>
-                                    <li>Interested in buying Premium or VIP?</li>
-                                    <li>Found 1 or more bugs?</li>
-                                    <li>Request Features?</li>
-                                </ul>
-                                <p>You can contact me via</p>
-                                <p>
-                                    <a href="https://wa.me/6289626029135" class="text-white">
-                                        <i class="fab fa-whatsapp"></i> WhatsApp
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="https://www.instagram.com/k4t4sh1._" class="text-white">
-                                        <i class="fab fa-telegram-plane"></i> Telegram
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="https://www.instagram.com/k4t4sh1._" class="text-white">
-                                        <i class="fab fa-instagram"></i> Instagram
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <script>___subtmpl0</script> -->
+<body>
+    <div class="loader"></div>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
  
-            </div>
-            <footer class="footer fixed-bottom">
-                <div class="copyright text-center my-auto">
-                    Made with <i class="fa fa-heart"></i> by
-                    <a href="https://www.instagram.com/k4t4sh1._" target="_blank" rel="nofollow">Katashi Hana</a>
-                    </span>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+                <div class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"> <i data-feather="align-justify"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                                <i data-feather="maximize"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <form class="form-inline mr-auto">
+                                <div class="search-element">
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200" />
+                                    <button class="btn" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle">
+                        <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i> <span class="badge headerBadge1"> 4 </span> </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Messages
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-message">
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item-avatar text-white"> <img alt="image" src="/assets/img/user.jpeg" class="rounded-circle" /> </span>
+                                    <span class="dropdown-item-desc">
+                                        <span class="message-user">Administrator</span>
+                                        <span class="time messege-text">Don't shoot, bro, you'll die :(</span>
+                                        <span class="time">Now</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item-avatar text-white"> <img alt="image" src="/assets/img/user.jpeg" class="rounded-circle" /> </span>
+                                    <span class="dropdown-item-desc">
+                                        <span class="message-user">Katashi Hana</span>
+                                        <span class="time messege-text">Semoga Kalian senang mengunakan api ini.</span>
+                                        <span class="time">Now</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item-avatar text-white"> <img alt="image" src="/assets/img/user.jpeg" class="rounded-circle" /> </span>
+                                    <span class="dropdown-item-desc">
+                                        <span class="message-user">Administrator</span>
+                                        <span class="time messege-text">Don't Forget to Subscribe to Youtube Channels: Katashi Hana</span>
+                                        <span class="time">2 Min Ago</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item-avatar text-white">
+                                        <img alt="image" src="/assets/img/user.jpeg" class="rounded-circle" />
+                                    </span>
+                                    <span class="dropdown-item-desc">
+                                        <span class="message-user">Administrator</span> <span class="time messege-text">Do not forget to take a bath..</span>
+                                        <span class="time">5 Min Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle">
+                        <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i> </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Notifications
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-icons">
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <span class="dropdown-item-icon bg-success text-white"> <i class="fas fa-check"></i></span> <span class="dropdown-item-desc"> Fix Bugs and Fix Error!<span class="time">Now</span> </span>
+                                </a>
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <span class="dropdown-item-icon bg-info text-white"> <i class="fas fa-bell"></i></span> <span class="dropdown-item-desc"> Welcome to Fahmi Api!<span class="time">Now</span> </span>
+                                </a>
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <span class="dropdown-item-icon bg-primary text-white"> <i class="fas fa-code"></i> </span> <span class="dropdown-item-desc"> Template update is available now! <span class="time">2 Min Ago</span> </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Main</li>
+                        <li><a href="/dashboard" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>System</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/princing" target="_blank">kgk iso</a></li>
+                                <li><a class="nav-link" href="/buylimit" target="_blank">kgk iso</a></li>
+                                <li><a class="nav-link" href="/changelog" target="_blank">kgk iso</a></li>
+                            
+                        </li>
+                        <li class="menu-header">Menu</li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="italic"></i><span>Ephoto</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/ephoto/pornhub?text=Fahmi&text2=Cog&apikey=Beta" target="_blank">COMING SOON!!</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="type"></i><span>Textpro</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/textpro/galaxya?text=Fahmi&apikey=Beta" target="_blank">COMING SOON!!</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="edit-2"></i><span>Photooxy</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/photooxy/wanted?url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJPo1loeMHXQHqNeMImZ3nHh1SMlAU08gFcx1OJoq9j3M7NHcoqK17RIh&s=10&text=goblok&text2=Anjeng&apikey=Beta" target="_blank">COMING SOON!!</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="layers"></i><span>Canvas</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/canvas/welcomer1?apikey=Beta&user=fahmicog&bg=https://img.kirameki.one/LTqHsfYS.jpg&img1=https://i.ibb.co/Kz2V1tB/1.jpg&img2=https://api.fahmicog.site/assets/img/user.jpeg&groupName=Famm&memberCount=100" target="_blank">COMING SOON!! 1</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="edit"></i><span>Maker</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/maker/kiss?apikey=Beta&img1=https://i.ibb.co/Kz2V1tB/1.jpg&img2=https://i.ibb.co/TPQ8Lb5/images.jpg" target="_blank">COMING SOON!!</a></li>
+                                
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="download"></i><span>Downloader</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr&apikey=Masukkan_ApikeyNya" target="_blank">Ig Download</a></li>
+                                <li><a class="nav-link" href="/api/music/spotify?query=Monolog-pamungkas&apikey=Masukkan_ApikeyNya" target="_blank">Spotify</a></li>
+                                <li><a class="nav-link" href="/api/download/tiktok?url=https://vt.tiktok.com/ZSJhvu1AE/&apikey=Masukkan_ApikeyNya" target="_blank">Tiktok Downloader</a></li>
+                                <li><a class="nav-link" href="/api/yt/playmp3?query=Monolog-pamungkas&apikey=Masukkan_ApikeyNya" target="_blank">Ytmp3</a></li>
+                                <li><a class="nav-link" href="/api/yt/search?query=katashi-hana&apikey=Masukkan_ApikeyNya" target="_blank">Ytsesrch</a></li>
+                                <li><a class="nav-link" href="/api/yt/playmp4?query=Monolog-pamungkas&apikey=Masukkan_ApikeyNya" target="_blank">Ytmp4</a></li>
+                                <li><a class="nav-link" href="/api/igstory?apikey=Masukkan_ApikeyNya&query=k4t4sh1._" target="_blank">igtory</a></li>
+                                <li><a class="nav-link" href="/api/smule?apikey=Masukkan_ApikeyNya&url=https://www.smule.com/recording/lewis-capaldi-someone-you-loved-slower-piano/1112691877_3200708124" target="_blank">Smule</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="search"></i><span>Searching</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/search/muihalal?query=Nasi&page=1&apikey=Masukkan_ApikeyNya" target="_blank">MUI</a></li>
+                                <li><a class="nav-link" href="/api/search/layarkaca?query=free guy&apikey=Masukkan_ApikeyNya" target="_blank">LK21</a></li>
+                                <li><a class="nav-link" href="/api/search/pstore?query=Nasi&page=1&apikey=Masukkan_ApikeyNya" target="_blank">PSTORE</a>
+                                <li><a class="nav-link" href="/api/search/palingmurah?query=diamond mobile legends&apikey=Masukkan_ApikeyNya" target="_blank">palingmurah</a>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="droplet"></i><span>NSFW</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/nsfw/cersex?apikey=Beta" target="_blank">COMING SOON!!!</a></li>
+                                
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="image"></i><span>Media</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/media/urban?query=wtf&apikey=Beta" target="_blank">COMING SOON!!! </a></li>l
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="umbrella"></i><span>Islamic</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/muslim/doaharian?apikey=MASUKAN_APIKEY" target="_blank">Doa Harian</a></li>
+                                <li><a class="nav-link" href="/api/muslim/bacaanshalat?apikey=MASUKAN_APIKEY" target="_blank">Bacaan Shalat</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="sliders"></i><span>Random</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/random/meme?apikey=MASUKIN_APIKEY" target="_blank">Meme</a></li>
+                                <li><a class="nav-link" href="/api/random/quotes?apikey=MASUKIN_APIKEY" target="_blank">Quotes</a></li>
+                                <li><a class="nav-link" href="/api/tiktok/randomtiktok?apikey=MASUKIN_APIKEY" target="_blank">Random Tiktok<br></a>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="compass"></i><span>News</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/news/jalantikus?apikey=Beta" target="_blank">COMING SOON!!!</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="feather"></i><span>Fun & Quis</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/kuis/caklontong?apikey=APIKEY" target="_blank">Cak Lontong (by Zahir)</a></li>
+                                <li><a class="nav-link" href="/api/kuis/tebakgambar?apikey=APIKEY" target="_blank">Tebak Gambar (by Zahir)</a></li>
+                                
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="disc"></i><span>Anime</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/anime/kusonime?search=planetarian&apikey=APIKEY" target="_blank">Kusonime search</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="zoom-in"></i><span>Stalking</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/stalk/tiktok?apikey=Masukkan_ApikeyNya&username=chikakiku" target="_blank">Tiktok</a></li>
+                                <li><a class="nav-link" href="/api/stalk/npm?apikey=Masukkan_ApikeyNya&username=zhirr-api" target="_blank">Npm</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="anchor"></i><span>Primbon</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/primbon/zodiak?query=aries&apikey=Beta" target="_blank">COMING SOON!!</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="info"></i><span>Information</span></a>
+                            <ul class="dropdown-menu">l
+                                <li><a class="nav-link" href="/api/info/kbbi?apikey=APIKEY&kata=Kayu" target="_blank">KBBI</a></li>
+                                <li><a class="nav-link" href="/api/info/wiki?apikey=APIKEY&query=kontol" target="_blank">WikiPedia</a></li>
+                                <li><a class="nav-link" href="/api/jadwal-bioskop?apikey=MASUKAN_APIKEY" target="_blank">Jadwal Bioskop</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="flag"></i><span>Other</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/hilih?kata=Yuda ganteng banget&apikey=MASUKAN_APIKEY" target="_blank">Kata Hilih</a></li>
+                                <li><a class="nav-link" href="/api/translate?kata=hi&apikey=MASUKAN_APIKEY" target="_blank">Translate</a></li>
+                                <li><a class="nav-link" href="/api/fakedata?country=en&apikey=MASUKAN_APIKEY" target="_blank">Fake Data</a></li>
+                                <li><a class="nav-link" href="/api/other/password?apikey=MASUKAN_APIKEY" target="_blank">Generate Password</a></li>
+                                <li><a class="nav-link" href="/api/other/mirrorcreator?url=https://www.mirrored.to/files/EB7BOJU3/[NekoPoi]_Isekai_Harem_Monogatari_-_04_[720P][nekopoi.care].mp4_links&apikey=MASUKAN_APIKEY" target="_blank">Bayy Pass Mirror Creator</a></li>
+                                <li><a class="nav-link" href="/api/other/ouo?url=https://ouo.io/8BgQ1w&apikey=MASUKAN_APIKEY" target="_blank">Bayy Pass ouo</a></li>
+                                <li><a class="nav-link" href="/api/other/ouo?apikey=MASUKAN_APIKEY&atas=kontol&bawah=memek&url=https://telegra.ph/file/ef1c969c9227e6c0ae564.jpg" target="_blank">MemeGen</a></li>
+                                <li><a class="nav-link" href="/api/addapikey?key=test&apikey=Putra" target="_blank">Add Apikey</a></li>
+                                <li><a class="nav-link" href="/api/cekapikey?apikey=MASUKAN_APIKEY" target="_blank">Cek Apikey</a></li>
+                            </ul>
+                        </li>
+ 
+                        <li class="menu-header">Other</li>
+                        <li><a href="https://wa.me/6289626029135?text=Assalamualaikum+Kak+kenalan+kak" class="nav-link"><i data-feather="globe"></i><span>Website</span></a></li>
+                        <li><a href="https://wa.me/6289626029135?text=Assalamualaikum+Kak+Saya+mau+donasi" class="nav-link"><i data-feather="heart"></i><span>Donasi</span></a></li>
+                        <li><a href="https://katashi-html.vercel.app/" class="nav-link"><i data-feather="star"></i><span>INFO</span></a></li>
+ 
+                        <li class="menu-header">About</li>
+                        <li><a href="https://youtube.com/channel/UCrEMv0c1cuploq5GruMuwvw" class="nav-link"><i data-feather="youtube"></i><span>Youtube</span></a></li>
+                        <li><a href="https://instagram.com/k4t4sh1._" class="nav-link"><i data-feather="instagram"></i><span>Instagram</span></a></li>
+                        <li><a href="https://wa.me/6289626029135?text=Assalamualaikum+Kak" class="nav-link"><i data-feather="github"></i><span>Whatsapp</span></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-statistic-4">
+                                    <div class="info-box7-block">
+                                        <h6 class="m-b-20 text-right">Total All Hit</h6>
+                                        <h4 class="text-right"><i class="fas fa-chart-line pull-left bg-indigo c-icon"></i><span>2220x</span></h4>
+                                        <p class="mb-0 mt-3 text-muted"><i class="fas fa-arrow-circle-up col-green m-r-5"></i><span class="text-success font-weight-bold">30%</span> then previous month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-statistic-4">
+                                    <div class="info-box7-block">
+                                        <h6 class="m-b-20 text-right">Total Hit Today</h6>
+                                        <p class="mb-0 mt-3 text-muted"><i class="fas fa-arrow-circle-up col-green m-r-5"></i><span class="text-success font-weight-bold">10%</span> then previous month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="col-12 col-sm-12 col-lg-6">
+                            <div class="card card-warning">
+                                <div class="card-header">
+                                    <h4>Terms and conditions</h4>
+                                    <div class="card-header-action">
+                                        <a data-collapse="#mycard-collapse3" class="btn btn-icon btn-warning" href="#"><i class="fas fa-minus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="collapse show" id="mycard-collapse3">
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Don't make many requests in a few seconds it will make your apikey error.</li>
+                                            <li>Create multiple accounts with the same <b>IP</b> then the <b>IP</b> will be automatically blocked.</li>
+                                            <li>Admin can change the terms on this website at any time, in order to maintain website quality.</li>
+                                            <li>Report immediately if there is a menu that is not working properly!</li>
+                                            <li>Admin is not responsible for what you do in using this website.</li>
+                                            <li>If you want to request a menu or donate, you can contact us directly.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-info">
+                                <div class="card-header">
+                                    <h4>Leaderboard</h4>
+                                    <div class="card-header-action">
+                                        <a data-collapse="#mycard-collapse4" class="btn btn-icon btn-info" href="#"><i class="fas fa-minus"></i></a>
+                                    </div>
+                                </div>
+                               
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </section>
+                <div class="settingSidebar">
+                    <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i> </a>
+                    <div class="settingSidebar-body ps-container ps-theme-default">
+                        <div class="fade show active">
+                            <div class="setting-panel-header">Setting Panel</div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">Select Layout</h6>
+                                <div class="selectgroup layout-color w-50">
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked />
+                                        <span class="selectgroup-button">Light</span>
+                                    </label>
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout" />
+                                        <span class="selectgroup-button">Dark</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                                <div class="selectgroup selectgroup-pills sidebar-color">
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar" />
+                                        <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                                    </label>
+                                    <label class="selectgroup-item">
+                                        <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked />
+                                        <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <h6 class="font-medium m-b-10">Color Theme</h6>
+                                <div class="theme-setting-options">
+                                    <ul class="choose-theme list-unstyled mb-0">
+                                        <li title="white" class="active">
+                                            <div class="white"></div>
+                                        </li>
+                                        <li title="cyan">
+                                            <div class="cyan"></div>
+                                        </li>
+                                        <li title="black">
+                                            <div class="black"></div>
+                                        </li>
+                                        <li title="purple">
+                                            <div class="purple"></div>
+                                        </li>
+                                        <li title="orange">
+                                            <div class="orange"></div>
+                                        </li>
+                                        <li title="green">
+                                            <div class="green"></div>
+                                        </li>
+                                        <li title="red">
+                                            <div class="red"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <div class="theme-setting-options">
+                                    <label class="m-b-0">
+                                        <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="mini_sidebar_setting" />
+                                        <span class="custom-switch-indicator"></span>
+                                        <span class="control-label p-l-10">Mini Sidebar</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-15 border-bottom">
+                                <div class="theme-setting-options">
+                                    <label class="m-b-0">
+                                        <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="sticky_header_setting" />
+                                        <span class="custom-switch-indicator"></span>
+                                        <span class="control-label p-l-10">Sticky Header</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme"> <i class="fas fa-undo"></i> Restore Default </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="main-footer">
+                <div class="footer-left">Made With ♡ by <a href="https://www.fahmicog.site">Katashi Hana</a>
+                </div>
+                <div class="footer-right"></div>
             </footer>
         </div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/core/jquery.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/core/popper.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/core/bootstrap.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/plugins/bootstrap-notify.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/black-dashboard.min.js"></script>
-    <script src="https://api.lolhuman.xyz/static/js/script.js"></script>
+ 
+    <script>
+        iziToast.success({
+            title: `Halo Guest !!!`,
+            message: 'Welcome to the Api Katashi website, please enjoy the features.',
+            position: 'topRight'
+        });
+    </script>
+ 
+    <!-- General JS Scripts -->
+    <script src="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <script src="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/js/famin.js"></script>
+    <!-- Template JS File -->
+    <script src="//rawcdn.githack.com/fahmicog/vendor/4089d03ff48f518acba5613962ee3e8643f7c332/js/scripts.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/js/fahmi.js"></script>
+    <!-- Custom JS File -->
+    <script src="//cdn.jsdelivr.net/gh/fahmicog/vendor@main/js/custom.js"></script>
+ 
 </body>
- 
-</html>
- 
-</html>
  
 </html>
