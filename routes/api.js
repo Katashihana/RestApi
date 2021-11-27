@@ -201,8 +201,9 @@ router.use(favicon(__path + "/views/favicon.ico"));
 
 const listkey = ["katashi", "Katashi", "Putra", "Pipiw"];
 
-router.post("/apikey", async (req, res, next) => {
+router.post("/addapikey", async (req, res, next) => {
   const key = req.query.key;
+  const apikey = req.query.apikey;
   if(listkey.includes(key)) {
     res.json({
       message: 'apikey sudah terdaftar'
