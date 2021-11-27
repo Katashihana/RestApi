@@ -34,9 +34,9 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="../css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-    <link href="../demo/demo.css" rel="stylesheet" />
+    <link href="https://velgrynd.herokuapp.com/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="https://velgrynd.herokuapp.com/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+    <link href="https://velgrynd.herokuapp.com/demo/demo.css" rel="stylesheet" />
 </head>
  
 <!-- play sound -->
@@ -314,7 +314,7 @@
             <script>
                 function getvisitor() {
                     var xhr = new XMLHttpRequest();
-                    var url = 'https://api.countapi.xyz/hit/velgrynd.herokuapp.com./visits';
+                    var url = 'https://api.countapi.xyz/hit/https://docs-katashi.herokuapp.com./visits';
                     xhr.onloadend = function() {
                         data = JSON.parse(this.responseText);
                         document.getElementById("visitor").textContent = data.value
